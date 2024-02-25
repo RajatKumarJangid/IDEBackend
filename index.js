@@ -20,7 +20,8 @@ app.get("/", function (req,res){
     compiler.flush(function () {
         console.log("running")
     })
-    res.sendFile(__dirname + "/index.html");
+    // res.sendFile(__dirname + "/index.html");
+    res.status(200).send({msg : "chal raha hai"});
 })
 
 
