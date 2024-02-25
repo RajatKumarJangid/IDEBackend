@@ -20,12 +20,11 @@ app.get("/", function (req,res){
     compiler.flush(function () {
         console.log("running")
     })
-    // res.sendFile(__dirname + "/index.html");
-    res.status(200).send({msg : "chal raha hai"});
+    res.status(200).send({msg : "working"});
 })
 
 
-app.post("/", function (req, res) {
+app.post("/compile", function (req, res) {
     let code = req.body.code
     let input = req.body.input
     let lang = req.body.lang
