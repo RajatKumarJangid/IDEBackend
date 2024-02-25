@@ -105,8 +105,8 @@ app.post("/compile", function (req, res) {
             }
         }
     }
-    catch (e) {
-        console.log("error")
+    catch (err) {
+        console.log(`error : ${err}`)
     }
 })
 
